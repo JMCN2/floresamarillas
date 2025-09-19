@@ -77,8 +77,9 @@
             position: relative;
             margin-top: 50px; /* separa del bloque de flores */
             text-align: center;
-            z-index: 5; /* para que quede encima de la animación */
+            z-index: 7; /* para que quede encima de la animación */
         }
+        
 
         
 
@@ -138,12 +139,12 @@
 
         .flowers {
             display: flex;
-    justify-content: center; /* centra horizontalmente */
-    align-items: center;     /* centra verticalmente */
-    flex-wrap: wrap;         /* por si tienes varias flores */
-    width: 100%;
-    position: relative;
-    margin: 0 auto; 
+            justify-content: center; /* centra horizontalmente */
+            align-items: center;     /* centra verticalmente */
+            flex-wrap: wrap;         /* por si tienes varias flores */
+            width: 100%;
+            position: relative;
+            margin: 0 auto; 
         }
 
         .flower {
@@ -679,6 +680,14 @@
                 align-items: center; 
             }
 
+            .title-container2 {
+                flex-direction: column;
+                gap: 10px; /* Menos espacio entre título e imagen */
+                top: 3%;   /* Más cerca del borde superior */
+                justify-content: center; 
+                align-items: center; 
+            }
+
             .title-image {
                 /* 4. Hacemos la imagen más pequeña para ahorrar espacio vertical */
                 width: 150px;
@@ -902,5 +911,9 @@
 
       /* Hace visible el contenedor del título SÓLO si el body NO tiene la clase .container */
       body:not(.container) .title-container {
+          opacity: 1;
+      }
+
+      body:not(.container) .title-container2 {
           opacity: 1;
       }
